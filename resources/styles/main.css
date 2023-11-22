@@ -1,0 +1,112 @@
+/*Fonts import*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/*CSS import*/
+@import url("./navbar.css");
+@import url("./footer.css");
+
+/*CSS*/
+:root {
+    --navbar-height:        64px;
+    --navbar-logo-width:    256px;
+    --post-navbar-margin:   16px;
+    --navbar-height-small:  calc(var(--navbar-height) * 4);
+    --footer-height:        96px;
+    --sponsor-width:        128px;
+    --sponsor-height:       512px;
+}
+
+*{margin:0}
+
+main {
+    margin-top: var(--navbar-height);
+    width: 100%;
+    text-align: center;
+    min-height: calc(100vh - var(--navbar-height) - var(--footer-height));
+}
+
+main h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+main p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+main hr {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.flex-main {
+    display:flex;
+}
+
+main sponsor-div {
+    width: var(--sponsor-width);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: var(--post-navbar-margin) 16px 0 16px;
+}
+
+main sponsor {
+    height: var(--sponsor-height);
+    width: var(--sponsor-width);
+    display:block;
+    
+    background: url("../png/sponsor.png");
+    margin: 0 0 0 0;
+}
+
+main div {
+    margin-top: var(--post-navbar-margin);
+    width: calc(  100% - var(--sponsor-width));
+    margin-right: 16px;
+}
+
+main div article {
+    border: 1px solid gray;
+    border-radius: 16px;
+    margin-top: 16px;
+}
+
+main textarea {
+    border-radius: 8px;
+    border: 1px solid gray;
+}
+
+main textarea:not(.contact-mail) {
+    resize: none;
+    width: 50%;
+    height: 128px;
+}
+
+main .contact-mail {
+    resize: none;
+    width: 50%;
+}
+
+main .contact-send {
+    background: white;
+    color: black;
+    transition: 0.3s;
+    font-size: large;
+    border-radius: 15px;
+    border: solid 1px black;
+    cursor: pointer;
+}
+
+main .contact-send:hover {
+    background: black;
+    color: white;
+}
+
+@media (max-width: 400px) {
+    main {
+        margin-top: var(--navbar-height-small);
+    }
+
+    main textarea {
+        width: calc(100% - 32px);
+    }
+}

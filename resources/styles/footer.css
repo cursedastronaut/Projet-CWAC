@@ -1,0 +1,20 @@
+/*Footer*/
+
+footer {
+    left:0;
+    margin:0;
+    padding:0;
+    position: relative;
+    bottom: 0;
+
+    background: url("../png/motif.png");
+    width:100%;
+    height: var(--footer-height);
+
+    font-family: 'Roboto';
+}
+
+footer copyright::before {
+    content: "© ";
+}
+

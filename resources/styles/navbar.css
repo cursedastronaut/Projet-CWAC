@@ -1,0 +1,65 @@
+/*Navbar*/
+navbar {
+    position: absolute;
+    height: var(--navbar-height);
+    width:100%;
+
+    padding:0;
+    margin:0;
+
+    left:0;
+    top:0;
+    
+    display:flex;
+    
+    background-color: goldenrod;
+}
+
+navbar .logo {
+    border: none;
+    cursor:pointer;
+    background: url("../png/logo.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+
+    font-size:large;
+    text-align: right;
+
+    transition: 0.3s;
+    padding-left: 64px;
+    
+}
+
+
+navbar .logo:hover {
+    font-size: larger;
+}
+
+navbar button:not(.logo) {
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    font-size:larger;
+
+    border:none;
+    border-radius: 0;
+    background-color: rgba(255,255,255,0);
+    transition:0.3s;
+}
+
+navbar button:not(.logo):hover {
+    background-color: rgba(255,255,255,0.3);
+    cursor:pointer;
+    font-size: x-large;
+}
+
+@media (max-width: 400px) {
+    navbar {
+        height: calc( var(--navbar-height) * 4 );
+        display:block;
+    }
+    navbar button {
+        height: calc( calc( var(--navbar-height) * 4 ) / 3 );
+        display:block;
+        width: 100%;
+    }
+}

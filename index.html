@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Université Arcène Lupin</title>
+        <link rel="stylesheet" href="resources/styles/main.css">
+        <style>
+            body {
+                background: url("resources/jpg/school.jpg");
+                background-size: cover;
+            }
+        </style>
+        <link rel="apple-touch-icon" sizes="180x180" href="resources/icon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="resources/icon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="resources/icon/favicon-16x16.png">
+        <link rel="manifest" href="resources/icon/site.webmanifest">
+    </head>
+    <body>
+        <script src="./resources/js/include.js"></script>
+        <header>
+            <navbar import-html="./resources/html/navbar.html"></navbar>
+        </header>
+        
+        <main class="flex-main">
+            <sponsor-div>
+                Nos Sponsors
+                <sponsor></sponsor>
+            </sponsor-div>
+            <div>
+                <h1>Accueil</h1>
+                <article import-html="./resources/html/history.html">
+                </article>
+                <article style="text-align: center;" import-html="./resources/html/best_student.html">
+                </article>
+                <article import-html="./resources/html/2023.html">
+                </article>
+                <article import-html="./resources/html/sponsors.html">
+                </article>
+            </div>
+        </main>
+
+        <footer import-html="./resources/html/footer.html">
+
+        </footer>
+        <script>importHTML();</script>
+
+    </body>
+</html>
